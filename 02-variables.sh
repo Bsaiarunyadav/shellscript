@@ -1,5 +1,7 @@
 #!/bin/bash
 
+Declaring inside the script
+
 PERSON1=Rohit
 PERSON2=Mohit
 
