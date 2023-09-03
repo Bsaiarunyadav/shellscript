@@ -15,6 +15,6 @@ SUM=$((NUMBER1+NUMBER2))
 # Rember this is an arthematic equation.
 #By running the command it will not show the result as we not printed any thing so
 
-echo "Additon of 2 number is:$sum"
+echo "Additon of 2 number is: $sum"
 
 
