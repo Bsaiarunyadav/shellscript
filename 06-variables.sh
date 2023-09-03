@@ -18,3 +18,7 @@ echo "username entered is:$USERNAME".
 echo "Please enter user password"
 read PASSWORD
 echo "password entered is:$PASSWORD".
+
+#in previous command we done that by prompting But there is a command called 
+read -s USERNAME 
+read -s PASSWORD .
