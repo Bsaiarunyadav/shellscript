@@ -13,3 +13,6 @@ PERSONS=("Ramesh" "suresh" "harish") #this is called array ,Instead single it ca
 #NOTE :- Inside array we always refers values with index and it starts from "0"
 
 echo "first person:${PERSONS[0]}" #this will show only 1 member that means RAMESH as index i.e "0"
+
+#Now for getting all the persons just add "@" symbol in echo i.e 
+ echo "first person:${PERSONS[@]}"     #(@-----MEANS ALL)
