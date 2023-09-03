@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Normaly DATE is the command that it used for knowing the date and time of the command excuted.
+#Normaly DATE is the command that it used for knowing the "DATE" and time of the command excuted.
 
-#To know when we excuted inside the script .
+#How To know when we excuted inside the script ? 
 
 DATE=$(date)
 

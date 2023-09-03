@@ -8,6 +8,10 @@
 
 # just give tha value as .
 
+#In the below command we are editing the file from outside but not from inside .
+
+#Note:- coding is the best practice to avoid the making changes inside the file try to make the changes from outside like shown below
+
 PERSON1=$1
 PERSON2=$2
 
