@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Why we should use the conditions in shell script ?
 # When you want to install any packages we should run it as a root user if not error will be shown to get the root access to install package 
 # So here it was showing the error through the "conditions"
