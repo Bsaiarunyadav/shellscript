@@ -20,4 +20,5 @@ then
 else
     echo "$NUMBER is not greater than 10"
 fi 
+
 # fi is the command to ending in shell scripting .
