@@ -11,14 +11,14 @@
 
 
 # this function should validate the previous command and inform the user it is success .
-USERID=$(id-u)
+USERID=$(id -u)
 Validate(){
     #$1--> It will receive the argument 1 
     if [ $1 -ne 0 ]
        Then 
             echo "installation...failure"
             exit 2
-       else 
+        else     
             echo "Installation...success"
     fi
 }
