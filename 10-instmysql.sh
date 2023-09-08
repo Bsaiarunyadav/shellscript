@@ -15,14 +15,6 @@ fi
 
 # as MYsqll is wrong it will show error and exit if 
 
-yum install mysql -y
 
-if [ $? -ne 0 ]
-then 
-    echo "Installation of mysql is error"
-    exit 2 
-else
-    echo "Installation of mysql is success"
-fi
 
 # And when we give mysql correctly it will run successfully
