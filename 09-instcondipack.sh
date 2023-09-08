@@ -19,4 +19,3 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
    Then 
        echo "ERROR:: run this script with root axis"
-
