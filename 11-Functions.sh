@@ -16,7 +16,7 @@ USERID=$(id -u)
 Validate(){
     #$1--> It will receive the argument 1 
     if [ $1 -ne 0 ]
-       Then 
+       then 
             echo "installation...failure"
             exit 2
        else     
