@@ -3,7 +3,7 @@
 # Now we try to install mysql
 # Again it is our responsibity to check weather the installation was success or not .
 # If we give 
-yum install mysqll -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then 
