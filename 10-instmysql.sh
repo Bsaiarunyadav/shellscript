@@ -30,12 +30,12 @@ fi
 
 #NOTE :- when ever we are running a command it is our respinsibity to validate it correctly 
 
-yum install mongodb -y
+yum install postfix -y
 
 if [ $? -ne 0 ]
 then 
-    echo "Installation of mongodb is error"
+    echo "Installation of postfix is error"
     exit 2 
 else
-    echo "Installation of mongodb is success"
+    echo "Installation of postfix is success"
 fi
