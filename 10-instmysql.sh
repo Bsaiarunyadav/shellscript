@@ -3,7 +3,7 @@
 # Now we try to install mysql
 # Again it is our responsibity to check weather the installation was success or not .
 # If we give
- 
+
 # yum install mysqll -y
 
 # if [ $? -ne 0 ]
@@ -34,8 +34,8 @@ yum install git -y
 
 if [ $? -ne 0 ]
 then 
-    echo "Installation of mysql is error"
+    echo "Installation of git is error"
     exit 2 
 else
-    echo "Installation of mysql is success"
+    echo "Installation of git is success"
 fi
