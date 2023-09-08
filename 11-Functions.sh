@@ -18,7 +18,7 @@ Validate(){
        Then 
             echo "installation...failure"
             exit 2
-        else     
+       else     
             echo "Installation...success"
     fi
 }
