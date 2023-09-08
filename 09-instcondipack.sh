@@ -21,3 +21,10 @@ then
     echo "ERROR:: run this script with root axis"
     exit 1
 fi  
+
+#If there are 100 statements and there is a mistake in 10th line so we will stop the process .
+#But in the shell script the negative point is that it proceeds forward if even there is a mistake that is default .
+# So ,How a programme understand the error ? So in shell there is EXIT STATUS ($?) .
+# $? stores the previous command status
+# IF $? is 0 then the command was success 
+# If $? is not 0 then the command was failure.
