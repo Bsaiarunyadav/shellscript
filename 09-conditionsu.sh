@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Why we should use the conditions in shell script ?
-# When you want to install any packages we should run it as a root user if not error will be shown to get the root access to install package 
-# So here it was showing the error through the "conditions"
-# it is an simple algorithm
-# sytanx of alogorithm in shell scripting
-# if [Expression]
-#    then 
-#       These command will run if expression is (True)
-#   else 
-#       This command will run if expression is  (flase)
-# Lets see a simple condition .
-# Now the the goal of Number=$1 is to check if the number is greater than 10 or not 
-NUMBER=$1
+# Now we will try to install a package using the CONDITIONS 
 
-if [ $NUMBER -gt 10 ]
-then 
-    echo "$NUMBER is greater than 10"
-else
-    echo "$NUMBER is not greater than 10"
-fi 
+#Our program goal is to install the MYSQL
 
-# fi is the command to ending in shell scripting .
+#Let us think in general way 
+# for installing the package we need to follow some steps .
+#   1 .check whether user is root or not
+#   2 .If not root user exit the program and inform to run this command with root axis.
+#   3 .if root user then install the package .
 
+# id -u (this will give you id of the user )
+#If Id -u --> 0 then root user 
+#If Id -u --> Not 0 Then normal user .
+
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]
+   Then 
+       echo "ERROR:: run this script with root axis"
+
+    #else 
+    #echo "INFO You are root user"      
+    #fi          
