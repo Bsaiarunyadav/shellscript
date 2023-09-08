@@ -20,6 +20,3 @@ if [ $USERID -ne 0 ]
    Then 
        echo "ERROR:: run this script with root axis"
 
-    #else 
-    #echo "INFO You are root user"      
-    #fi          
