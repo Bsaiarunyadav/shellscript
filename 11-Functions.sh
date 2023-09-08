@@ -1,4 +1,5 @@
 #!/bin/bash
+
  # FRUNCTIONS
  # HERE you will keep the code inside the functions which is more often repeated ,And call when ever you require .
 # Functions will do some work on behalf of us and it will update what happend .
@@ -25,9 +26,9 @@ Validate(){
 }
 
 if [ USERID -ne 0 ]
-    then 
-        echo "ERROR:: please run this with root access
-        exit 2
+then 
+    echo "ERROR:: please run this with root access
+    exit 2
  # else  
     #   echo "Info :: you are root user"
 fi
