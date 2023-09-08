@@ -28,8 +28,8 @@ if [ USERID -ne 0 ]
     then 
         echo "ERROR:: please run this with root access
         exit 2
-# else 
-# echo "Info :: you are root user"
+ # else  
+    #   echo "Info :: you are root user"
 fi
 
 # It is our responsibility again to check weather the instalation is sucess or not 
@@ -41,5 +41,3 @@ VALIDATE $?
 yum install postfix -y
 
 VALIDATE $?
-
-
