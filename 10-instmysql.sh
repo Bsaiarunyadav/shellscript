@@ -30,12 +30,12 @@ fi
 
 #NOTE :- when ever we are running a command it is our respinsibity to validate it correctly 
 
-yum install mongodb-org -y
+yum install mongodb -y
 
 if [ $? -ne 0 ]
 then 
-    echo "Installation of mongodb-org is error"
+    echo "Installation of mongodb is error"
     exit 2 
 else
-    echo "Installation of mongodb-org is success"
+    echo "Installation of mongodb is success"
 fi
