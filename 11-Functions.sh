@@ -14,7 +14,7 @@
 # this function should validate the previous command and inform the user it is success .
 USERID=$(id -u)
 
-Validate(){
+VALIDATE(){
     #$1--> It will receive the argument 1 
     if [ $1 -ne 0 ]
        then 
@@ -25,7 +25,7 @@ Validate(){
     fi
 }
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: please run this with root access
     exit 2
@@ -41,4 +41,4 @@ VALIDATE $?
 
 yum install postfix -y
 
-VALIDATE $?
+VALIDATE $? 
