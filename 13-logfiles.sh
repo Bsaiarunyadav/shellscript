@@ -86,11 +86,11 @@ then
     exit 2
 fi
 
-yum install mysql -y &>>$logfile
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $?
 
-yum install postfix -y &>>$logfile
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? 
 
