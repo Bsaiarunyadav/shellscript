@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 # Here we add the $2 argument as "Installing postfix and mysql"   
 
 USERID=$(id -u)
