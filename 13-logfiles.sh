@@ -53,4 +53,44 @@
         # cat ls .log 
 # Now Here the content was not getting removed but it was apending .
 # We should use ">>&" To redirect the success and failure  content .
+# So now we should write a script basing upon log files .
+
+    # DATE and TIME STAMP 
+# When ever we are writing scripts DATE and TIME STAMPS are very important because to Know when we excuted it .
+# to get the complete format :- 
+            # "date +%F-%H-%M-%S"
+            #DATE=$date +%F-%H-%M-%S
+
+# NOW we will write a script
+
+DATE=($date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
+VALIDATE(){
+    #$1--> It will receive the argument 1 
+    if [ $1 -ne 0 ]
+       then 
+            echo "$2...failure"
+            exit 2
+       else     
+            echo "$2...success"
+    fi
+}
+
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]
+then 
+    echo "ERROR:: please run this with root access"
+    exit 2
+fi
+
+yum install mysql -y &>>$logfile
+
+VALIDATE $?
+
+yum install postfix -y &>>$logfile
+
+VALIDATE $? 
 
