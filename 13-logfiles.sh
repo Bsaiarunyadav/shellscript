@@ -88,9 +88,9 @@ fi
 
 yum install mysql -y &>>$LOGFILE
 
-VALIDATE $?
+VALIDATE $? "installing mysql"
 
 yum install postfix -y &>>$LOGFILE
 
-VALIDATE $? 
+VALIDATE $? "installing postfix"
 
