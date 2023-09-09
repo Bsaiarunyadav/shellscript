@@ -30,7 +30,7 @@
 # COMMAND IS :- "ls -l > ls .log"  and check "cat ls .log"
         # To remove log files --> "rm -rf ls .log"
 
-# ALSO Now if are giving and wrong command 
+# ALSO Now if you are giving a wrong command 
 #   EX :- "lsss -l > ls .log"
 # check :-   "cat ls .log"
 # The logs will not be shown as we printed wrong .
@@ -67,14 +67,18 @@ DATE=($date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+R="\e[31m"
+G="\e[32M"
+N="\e[0M"
+
 VALIDATE(){
     #$1--> It will receive the argument 1 
     if [ $1 -ne 0 ]
        then 
-            echo "$2...failure"
+            echo -e "$R $2...failure $N"
             exit 2
        else     
-            echo "$2...success"
+            echo -e "$G $2...success $N"
     fi
 }
 
@@ -94,3 +98,53 @@ yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "installing postfix"
 
+# HERE IN THe above script 
+# We are giving the date and time . And the log file  will be stored in the tmp file with the script name , Date & time.
+
+# Now we will discuss colours in shell script with some codes for the best understanding in the scripts .
+# AND THE SYNTAX IS 
+    #EX :- \e[31m
+
+    # Black        0;30     Dark Gray     1;30
+    # Red          0;31     Light Red     1;31
+    # Green        0;32     Light Green   1;32
+    # Brown/Orange 0;33     Yellow        1;33
+    # Blue         0;34     Light Blue    1;34
+    # Purple       0;35     Light Purple  1;35
+    # Cyan         0;36     Light Cyan    1;36
+    # Light Gray   0;37     White         1;37
+
+# NOW TO CHECK :-
+    # EX 1 :-
+    # IF YOU PRINT :- echo "\e[31m HELLO WORLD"
+    # It will print normally
+    # BUT you should tell i'm enabling colour (JUST ADD -e ) to the echo statement then it will consider as colour   
+    # IF YOU PRINT :- echo -e "\e[31m HELLO WORLD"
+    # Here it will print with colour RED .
+    # EX 2 :- IF YOU PRINT :- echo -e "\e[31m HELLO WORLD, IAM LEARNING DEVOPS
+    # HERE it will print the whole thing in the same colour But i need the "IAM LEARNING DEVOPS" in white THEN .
+    # echo -e "\e[31m HELLO WORLD, \e[0m IAM LEARNING DEVOPS"
+    # HERE it will print "HELLO WORLD" in RED and "IAM LEARNING DEVOPS" in white .
+
+# In the above script "echo -e " is the syntax that you are informing the shell to enable the colour .
+
+# LET us improvise the script now .
+# In above already written script You just add 
+
+
+    #ADD THE FUCNTIONS AS 
+        # R="\e[31m"
+        # G="\e[32M"
+        # N="\e[0M"
+
+
+        #VALIDATE(){
+    #$1--> It will receive the argument 1 
+    #     if [ $1 -ne 0 ]
+    #        then 
+    #             echo -e "$2... $R failure $N" 
+    #             exit 2
+    #        else     
+    #             echo -e "$2...$G success $N"
+    #     fi
+    # }
