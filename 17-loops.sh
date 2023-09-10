@@ -22,11 +22,11 @@ fi
 VALIDATION(){
     if [$1 -ne 0];
     then 
-        echo -e "if Installation ... $R FAILURE $N"
+        echo -e "if Installing $2 ... $R FAILURE $N"
     else
-        echo -e "if installation ... $G SUCCESS $N"
+        echo -e "if installing $2 ... $G SUCCESS $N"
     fi
-    }
+}
 
 
 
