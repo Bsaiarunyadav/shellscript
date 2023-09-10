@@ -3,7 +3,7 @@
 # Now we will install the packages using the loops.
 
 DATE=$(date +%F)
-LOGSDIR=/c/users/B.Radhaprathap/repo/shellscript/shellscript-logs
+LOGSDIR=/home/centos/shellscript-logs
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
@@ -15,7 +15,7 @@ G="\e[32m"
 
 if [ $USERID -ne 0 ];
 then 
-    echo -e "$R ERROR :: Run this with sudo access $N"
+    echo -e "$R ERROR :: Run this script with root access $N"
     exit 1
 fi
 
