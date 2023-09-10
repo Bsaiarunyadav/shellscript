@@ -15,7 +15,7 @@ G="\e[32m"
 
 if [ $USERID -ne 0 ];
 then 
-    echo -e "$R ERROR :: installation is failure $N"
+    echo -e "$R ERROR :: Run this with sudo access $N"
     exit 1
 fi
 
