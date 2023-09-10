@@ -25,6 +25,7 @@ VALIDATION(){
         echo -e "if Installation ... $R FAILURE $N"
     else
         echo -e "if installation ... $G SUCCESS $N"
+    fi
     }
 
 
