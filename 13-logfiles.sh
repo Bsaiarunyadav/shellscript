@@ -63,7 +63,7 @@
 
 # NOW we will write a script
 
-DATE=($date +%F)
+DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
@@ -75,10 +75,10 @@ VALIDATE(){
     #$1--> It will receive the argument 1 
     if [ $1 -ne 0 ]
         then 
-            echo -e "$2 ... $R failure $N"
+            echo -e "$2 ...$R failure $N"
             exit 2
         else     
-            echo -e "$2 ... $G success $N"
+            echo -e "$2 ...$G success $N"
     fi
 }
 
