@@ -3,7 +3,7 @@
 # Now we will install the packages using the loops.
 
 DATE=$(date +%F)
-LOGSDIR=/c/users/B.Radhaprathap/repo/shellscript-logs
+LOGSDIR=/c/users/B.Radhaprathap/repo/shellscript/shellscript-logs
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
