@@ -39,6 +39,4 @@ do
         yum install $i -y &>>$LOGFILE
     else 
         echo -e "$Y $i is already installed $N"
-        
-    
-done
+    done
