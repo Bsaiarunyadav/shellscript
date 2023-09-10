@@ -37,7 +37,7 @@
 #             write your statement 
 #         done 
 
-for i in {1....100}
+for i in {1..100}
 # Here the 1 st value become 1 and print like that it will loopes until 100 .
 do 
     echo $i
