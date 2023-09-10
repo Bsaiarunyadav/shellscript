@@ -13,7 +13,7 @@ Y="\e[33m"
 G="\e[32m"
 
 
-if [$USERID -ne 0];
+if [ $USERID -ne 0 ];
 then 
     echo -e "ERROR :: installation is $R failure $N"
     exit 1
@@ -25,7 +25,7 @@ VALIDATION(){
         echo -e "if Installation ... $R FAILURE $N"
     else
         echo -e "if installation ... $G SUCCESS $N"
-}
+    }
 
 
 
