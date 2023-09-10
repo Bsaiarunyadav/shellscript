@@ -73,12 +73,12 @@ N="\e[0M"
 
 VALIDATE(){
     #$1--> It will receive the argument 1 
-    if [ $1 -ne 0 ]
-        then 
-            echo -e "$2 ...$R failure $N"
-            exit 2
-        else     
-            echo -e "$2 ...$G success $N"
+if [ $1 -ne 0 ]
+    then 
+        echo -e\ "$2 ...$R failure $N"
+        exit 2
+    else     
+        echo -e\ "$2 ...$G success $N"
     fi
 }
 
