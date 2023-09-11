@@ -42,3 +42,6 @@ for i in {1..100}
 do 
     echo $i
 done 
+
+# NOW We wil install packages using the loops .
+

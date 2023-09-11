@@ -39,3 +39,12 @@ then
 else
     echo "Installation of postfix is success"
 fi
+
+# So now check the above lines just for 2 packages we printed 30 lines of script .
+# Don't we think it was a long script 
+# Always remember less lines code work more .
+
+# When as you know those lines are repeating again we know we have a principle called as  "DRY" .
+# For this there is a priciple called "FUNCTIONS" .
+ 
+

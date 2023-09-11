@@ -28,3 +28,4 @@ fi
 # $? stores the previous command status
 # IF $? is 0 then the command was success 
 # If $? is not 0 then the command was failure.
+# EX :- 

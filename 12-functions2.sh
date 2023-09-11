@@ -31,3 +31,5 @@ VALIDATE $? "installing mysql"
 yum install postfix -y
 
 VALIDATE $? "installing postfix"
+
+# This shows us hot to decrease the no .of lines in code .

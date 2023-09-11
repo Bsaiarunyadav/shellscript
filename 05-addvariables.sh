@@ -8,13 +8,13 @@
 
 NUMBER1=$1
 NUMBER2=$2
-
+NUMBER3=$3
 # I need to run this command inside the shell to add 2 number now 
 #COMMAND
-SUM=$((NUMBER1+NUMBER2)) 
+SUM=$((NUMBER1+NUMBER2+NUMBER3)) 
 # Rember this is an arthematic equation.
 #By running the command it will not show the result as we not printed any thing so
 
-echo "Additon of 2 number is: $SUM"
+echo "Additon of 3 numbers is: $SUM"
 
 
