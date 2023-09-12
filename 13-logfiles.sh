@@ -68,8 +68,8 @@ SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
-G="\e[32M"
-N="\e[0M"
+G="\e[32m"
+N="\e[0m"
 
 VALIDATE(){
     #$1--> It will receive the argument 1 
