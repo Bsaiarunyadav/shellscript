@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#I'm going to connect to a DATABASE ,So i need password 
+# I'm going to connect to a DATABASE ,So i need password 
 
-#U rememer when we try to login into the server it keeps username & password hide even iif we type it so how it was happening ?
+# U rememer when we try to login into the server it keeps username & password hide even iif we type it so how it was happening ?
 
-#there is some thing called "READ COMMAND" This will take the input from the terminal now if you print .
+# there is some thing called "READ COMMAND" This will take the input from the terminal now if you print .
 
 echo "Please enter user name"
 
