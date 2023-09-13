@@ -31,6 +31,7 @@ for i in $@
     if [ $? -ne 0 ];
     then   
         echo "$i was not installed let's install it"
+        yum install $i -y
     else
         echo -e "$Y $i is already installed $N"
     fi
