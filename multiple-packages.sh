@@ -7,7 +7,7 @@ LOGSDIR=/home/centos/shellscript/shellscript-logs
 LOGFILE=$LOGSDIR/$0-$DATE.log
 R="\e[31m"
 N="\e[0m"
-Y="\e[33m
+Y="\e[33m"
 G="\e[32m"
 
 if [ $USERID -ne 0 ];
