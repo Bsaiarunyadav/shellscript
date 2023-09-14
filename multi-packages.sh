@@ -19,20 +19,20 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ];
         then 
-            echo -e "$R INSTALLATION IS ERROR $N"
+            echo -e "$R $2 INSTALLATION IS ERROR $N"
         else 
-            echo -e "$G INSTALLATION IS SUCCESS $N"
+            echo -e "$G $2 INSTALLATION IS SUCCESS $N"
     fi
 }
 
 for i in $1
 do 
-    yum install -y &>>LOGFILE
+    yum list installed $i &>>LOGFILE
     if [ $? -ne 0 ]
         then 
-            echo -e "$G $1 package is not installed; Let's install it $N"
+            echo -e "$G $i package is not installed; Let's install it $N"
         else
-            echo -e "$Y $1 package is already installed $N"
+            echo -e "$Y $i package is already installed $N"
     fi            
-    VALIDATE "$?" &>>LOGFILE
+    VALIDATE "$?" "$i" &>>LOGFILE
 done
