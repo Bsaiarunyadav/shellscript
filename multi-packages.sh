@@ -1,9 +1,12 @@
 #!/bin/bash
-NUMBER=$1
+DATE=$(date +%F)
 
-if [ $NUMBER -gt 1000 ];
+R=/e[31m"
+N=/e[0m"
+
+
+if [ $? -ne 0 ];
     then 
-        echo "$NUMBER IS GREATER THAN 1000"
-    else 
-        echo "$NUMBER IS NOT GREATER THAN 1000"
+        echo -e "$R ERROR :: Please run this script with root access $N"
+    exit 1
 fi
