@@ -2,7 +2,7 @@
 DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGSDIR=/home/centos/shellscript/shellscript-logs
-LOGSFILES=$LOGSDIR/$SCRIPT_NAME+$DATE.log/
+LOGSFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m"
 N="\e[0m"
@@ -25,14 +25,15 @@ VALIDATE(){
     fi
 }
 
-for i in $i
+for i in $@
 do 
     yum list installed $i &>>LOGFILE
-    if [ $1 -ne 0 ]
+    if [ $? -ne 0 ]
         then 
             echo -e "$G $i package is not installed; Let's install it $N"
+            yum install -y
+            VALIDATE "$?" "$i"
         else
             echo -e "$Y $i package is already installed $N"
     fi            
-    VALIDATE "$?" "$i" &>>LOGFILE
 done
