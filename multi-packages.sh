@@ -31,7 +31,7 @@ do
     if [ $? -ne 0 ]
         then 
             echo -e "$G $i package is not installed; Let's install it $N"
-            yum install -y
+            yum install $i -y
             VALIDATE "$?" "$i"
         else
             echo -e "$Y $i package is already installed $N"
