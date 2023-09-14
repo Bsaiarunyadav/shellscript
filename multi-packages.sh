@@ -25,7 +25,7 @@ VALIDATE(){
     fi
 }
 
-for i in $1
+for i in $i
 do 
     yum list installed $i &>>LOGFILE
     if [ $? -ne 0 ]
