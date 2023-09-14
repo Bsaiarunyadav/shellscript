@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $? -ne 0 ];
+if [ $? -ne 1000 ];
     then 
         echo "NUMBER IS NOT GREATER THAN 0"
     else 
