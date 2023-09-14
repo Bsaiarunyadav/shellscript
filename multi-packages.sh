@@ -28,7 +28,7 @@ VALIDATE(){
 for i in $i
 do 
     yum list installed $i &>>LOGFILE
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
         then 
             echo -e "$G $i package is not installed; Let's install it $N"
         else
