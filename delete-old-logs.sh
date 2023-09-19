@@ -11,6 +11,6 @@ echo "$FILES_TO_DELTE"
 
 while read line
 do
-    echo "deleting $line" &>>$LOGSFILE
+    echo "Deleting $line" &>>$LOGSFILE
     rm -rf "$line"
 done <<< $FILES_TO_DELETE
