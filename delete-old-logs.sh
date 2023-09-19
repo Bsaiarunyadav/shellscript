@@ -1,4 +1,5 @@
 #!/bin/bash
+
 APP_LOGS_DIR=/home/centos/shellscript/logfiles.sh   
 DATE=$(date +%F)
 SCRIPT_NAME=$0
@@ -7,8 +8,9 @@ LOGSFILE=$LOGSDIR/$0-$DATE.log
 FILES_TO_DELTE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
 echo "$FILES_TO_DELTE"
 
-while read line 
+
+for i in $@
 do 
     echo "deleting $line" &>>LOGSFILE
     rm -rf $line
-done <<<$FILES_TO_DELETE
+done <<< $FILES_TO_DELETE
