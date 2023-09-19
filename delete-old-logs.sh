@@ -9,8 +9,8 @@ FILES_TO_DELETE=$(find "$APP_LOGS_DIR" -name "*.log" -type f -mtime +10)
 echo "$FILES_TO_DELTE"
 
 
-while read line
+while read -r line
 do
-    echo "deleting $line" &>>$LOGSFILE
+    echo "Deleting $line" &>>$LOGSFILE
     rm -rf "$line"
-done <<< $FILES_TO_DELETE
+done <<< "$FILES_TO_DELETE"
