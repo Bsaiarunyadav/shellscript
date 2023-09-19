@@ -11,4 +11,4 @@ while read line
 do 
     echo "deleting $line" &>>LOGSFILE
     rm -rf $line
-done <<< $FILES_TO_DELETE
+done <<<$FILES_TO_DELETE
