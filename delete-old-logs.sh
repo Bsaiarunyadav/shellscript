@@ -9,7 +9,7 @@ FILES_TO_DELTE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
 echo "$FILES_TO_DELTE"
 
 
-for i in $@
+for line in $@
 do 
     echo "deleting $line" &>>LOGSFILE
     rm -rf $line
