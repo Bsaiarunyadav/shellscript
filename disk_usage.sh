@@ -5,8 +5,8 @@
 # log redirections
 
 LOGFILE_DIRECTORY=/tmp
-DATE=$(date +%F+%H+%M+%S)
-LOGSFILE="$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log"
+DATE=$(date +%F:%H:%M:%S)
+LOGFILE="$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log"
 SCRIPT_NAME=$0
 R="\e[31m"
 N="\e[0m"
@@ -25,7 +25,7 @@ do # here  write your statements
     #this command will give the usage in number for comparison 
     usage=$(echo $line | awk '{print $6}'| cut -d % -f1) 
     #this will give us the partion output
-    Partition=$(echo $line | awk '{print $1}')
+    partition=$(echo $line | awk '{print $1}')
     #now we need to check whether it is more than threshold or not 
     if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then
