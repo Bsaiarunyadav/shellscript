@@ -23,7 +23,7 @@ message=""
 while IFS= read line 
 do # here  write your statements 
     #this command will give the usage in number for comparison 
-    usage=$(echo $line | awk '{print $6}' | cut -d % -f1) 
+    usage=$(echo $line | awk '{print $6}') 
     #this will give us the partion output
     Partition=$(echo $line | awk '{print $1}')
     #now we need to check whether it is more than threshold or not 
