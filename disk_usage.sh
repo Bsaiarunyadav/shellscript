@@ -29,12 +29,11 @@ do # here  write your statements
     #now we need to check whether it is more than threshold or not 
     if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then
-        message+="HIGH DISK USAGE ON $partition: $usage\n"
+        message+="HIGH DISK USAGE ON $partition: $usage\ n"
     fi
 done <<< $DISK_USAGE                 
 # output is this one 
 
+echo -e "message: $message"
+
 echo "$message" | mail -s "High Disk Usage" bsaiyadav1234@gmail.com
-
-
-echo 
