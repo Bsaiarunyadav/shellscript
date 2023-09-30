@@ -20,7 +20,7 @@ DISK_USAGE_THRESHOLD=1 #we can take a threshold value upto 70%
 
 #Now we got the values i need to loop thorugh it ; to check the actual usage more than threshold or not for the we need have a while loop to read the disk usage .
 # IFS= Internal field seperator is space
-while IFS= read $line 
+while IFS= read line 
 do # here  write your statements 
     echo "output: $line"
 
