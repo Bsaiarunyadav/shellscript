@@ -17,7 +17,7 @@ G="\e[32m"
 
 DISK_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')  #This is the command .
 DISK_USAGE_THRESHOLD=1 #we can take a threshold value upto 70%
-message=
+message=""
 #Now we got the values i need to loop thorugh it ; to check the actual usage more than threshold or not for the we need have a while loop to read the disk usage .
 # IFS= Internal field seperator is space
 while IFS= read line 
@@ -29,7 +29,7 @@ do # here  write your statements
     #now we need to check whether it is more than threshold or not 
     if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then
-        message+="HIGH DISK USAGE $partition: $usage"
+        message+="HIGH DISK USAGE ON $partition: $usage"
     fi
 done <<< $DISK_USAGE                 
 # output is this one 
