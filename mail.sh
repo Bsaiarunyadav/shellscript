@@ -10,7 +10,7 @@ ALERT_TYPE=$5
 
 # HOW to call this script
 # mail.sh TO_ADDRESS SUBJECT BODY TEAM_NAME ALERT_TYPE 
-FINAL_BODY=$(sed -e '/TEAM_NAME/DEVOPS-TRANING/g' 's/ALERT_TYPE/High disk usage/g' -e "s/MESSAGE/$BODY/g"  template.HTML)
+FINAL_BODY=$(sed -e 's/TEAM_NAME/DEVOPS-TRANING/g' 's/ALERT_TYPE/High disk usage/g' -e "s/MESSAGE/$BODY/g"  template.HTML)
 
 #echo "all args:$@"
 
